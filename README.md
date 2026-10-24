@@ -67,9 +67,9 @@ You can't install it by just copying it to the TV. Follow the **[install guide](
 | 👤 A free LG Developer account | Takes 2 minutes to create. We show you how. |
 | ⏱️ About 20 minutes | Only the first time. |
 
-**No root required.** Unbadge uses LG's own official "Developer Mode", which is made for installing your own apps.
+**No root required.** You **sideload** Unbadge (install it from your computer instead of the LG app store) using LG's own official "Developer Mode", which is made for exactly this.
 
-## How to install (quick overview)
+## How to sideload it (quick overview)
 
 1. **Make a free LG Developer account**
 2. **Turn on Developer Mode** on your TV
