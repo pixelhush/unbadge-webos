@@ -4,11 +4,11 @@ This page is for developers. If you just want to install Unbadge, see the [insta
 
 ## The short version
 
-On LG TVs, JioHotstar runs as a web app in the TV's built-in web engine. Unbadge is a tiny webOS app that opens that same publicly served TV web app and adds **one stylesheet** that hides the promotional "Asli 4K" badge.
+On LG TVs, JioHotstar runs as a web app in the TV's built-in web engine. Unbadge is a tiny webOS app that opens that same publicly served TV web app and adds **one stylesheet** that hides the "Asli 4K" overlay (the badge and the corner logo shown with it during 4K playback).
 
 - No JioHotstar code is copied, bundled or modified.
 - Nothing about playback, DRM, sign-in or subscriptions is touched. Video plays in the TV's own web engine, exactly as it would otherwise.
-- The broadcaster's logo and any ownership notices are left alone.
+- Only the app's on-screen interface is styled. The video itself is never touched.
 
 ## Pieces
 
@@ -21,17 +21,20 @@ On LG TVs, JioHotstar runs as a web app in the TV's built-in web engine. Unbadge
 
 ## What the stylesheet hides
 
-The badge is drawn as an overlay on top of the video. The stylesheet sets `display: none` on three of its elements, which have stable, readable names:
+The badge and logo are drawn as an overlay on top of the video, in the app's interface. The stylesheet sets `display: none` on these elements, which have stable, readable names:
 
 - `.ASLI_4K_LOGO_WRAPPER`: the badge's container
 - `#Asli-4K-6`: the animated badge
 - `img[src*="asli-4k"]`: the static badge image
+- `img[src*="/rebrand/logo…"]` inside the playback overlay (`.fixed.ELEVATION_1`, `.fixed.right-10.top-10`): the corner logo
+
+`HIDE_CORNER_LOGO` at the top of the userscript turns the logo part off.
 
 Nothing else on the page is changed.
 
 ## Verified on
 
-LG OLED65G46LA (G4), webOS 26 (`11.2.0`, Chromium 132): 4K (3840×2160) playback with the badge hidden.
+LG OLED65G46LA (G4), webOS 26 (`11.2.0`, Chromium 132): 4K (3840×2160) playback with the badge and corner logo hidden.
 
 ## If the badge comes back
 
@@ -42,4 +45,4 @@ The streaming app gets updated from time to time, and the element names can chan
 3. Update the selectors in `userScript.js` with the new readable names. Avoid auto-generated class names like `_1rRaW_…`, which change on every update.
 4. Test on a TV, set `inspectable` back to `false`, and send a pull request.
 
-Keep changes limited to hiding the promotional badge. See the ground rules in [CONTRIBUTING.md](../CONTRIBUTING.md).
+Keep changes limited to this overlay. See the ground rules in [CONTRIBUTING.md](../CONTRIBUTING.md).

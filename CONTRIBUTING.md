@@ -77,8 +77,8 @@ Read [docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md) before changing the userscript
 
 ## Ground rules
 
-- Keep it **cosmetic**: hide the promotional "Asli 4K" badge only. No changes to playback, DRM, ads, entitlements or account behaviour. PRs that try to unlock content will be closed.
-- **Never hide broadcaster logos, watermarks, copyright notices or other ownership information.**
+- Keep it **cosmetic**: only the "Asli 4K" playback overlay (badge and corner logo) is hidden. No changes to playback, DRM, ads, entitlements or account behaviour. PRs that try to unlock content will be closed.
+- **Never touch the video itself**, or hide copyright notices, credits or other ownership information. Don't hide other parts of the app's interface.
 - Don't commit JioHotstar code, assets, logos, or quotes of their source code.
 - **Screenshots:** don't include frames of matches, shows or films (that's copyrighted content). Crop to the screen corner, blur the picture, or use a menu screen.
 - No new dependencies without a strong reason.

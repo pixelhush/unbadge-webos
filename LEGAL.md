@@ -12,11 +12,11 @@ Unbadge is an **independent, unofficial, non-commercial community project**. It 
 
 ## 3. What Unbadge does, and what it doesn't
 
-Unbadge is a small launcher for LG webOS TVs. It opens JioHotstar's own publicly served TV web app in the TV's web engine and applies a **cosmetic style rule** that hides one on-screen **promotional badge** ("Asli 4K") on the viewer's own screen. This is similar to how browser extensions let users change how a website looks on their own device.
+Unbadge is a small launcher for LG webOS TVs. It opens JioHotstar's own publicly served TV web app in the TV's web engine and applies a **cosmetic style rule** that hides the **"Asli 4K" overlay** (a promotional badge and the corner logo shown with it during 4K playback) in the app's on-screen interface, on the viewer's own screen. This is similar to how browser extensions let users change how a website looks on their own device.
 
 Unbadge **does not**:
 
-- hide, remove or alter the broadcaster's logo, watermarks, copyright notices or any other ownership or rights-management information
+- remove, alter or obscure anything in the video itself, or in any copy of any content. It does not touch watermarks or copyright notices in the video, credits, or any other ownership or rights-management information
 - include, copy, modify or redistribute any JioHotstar or LG software, code, content or assets
 - bypass, disable or interfere with DRM, encryption, copy protection, geo-restrictions or any other access control
 - give access to any content, plan or feature you haven't paid for. **A valid JioHotstar subscription is required.**
