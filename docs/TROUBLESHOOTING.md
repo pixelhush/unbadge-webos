@@ -45,11 +45,21 @@ Your Mac is blocking Dev Manager from your home network. Macs ask for permission
 2. Turn on **webOS Dev Manager**.
 3. Quit Dev Manager completely (**Cmd+Q**), open it again, and reconnect.
 
-**Dev Manager isn't in that list?** Then your Mac never asked. As a workaround, start it from the **Terminal** app, which already has permission. Paste this and press Enter, and keep the Terminal window open while you use Dev Manager:
+**Dev Manager isn't in that list?** That's a [known bug in Dev Manager 1.99.20](https://github.com/webosbrew/dev-manager-desktop/issues/432) on recent macOS: the app never asks for permission, so it never shows up. Reinstalling doesn't help. It's fixed in Dev Manager's code but not released yet. Until then, pick one:
 
-```
-"/Applications/webOS Dev Manager.app/Contents/MacOS/webos-dev-manager"
-```
+- **Easiest: start it from Terminal.** Terminal already has permission, and Dev Manager borrows it. Open the **Terminal** app, paste this, press Enter, and keep the window open while you use Dev Manager:
+  ```
+  "/Applications/webOS Dev Manager.app/Contents/MacOS/webos-dev-manager"
+  ```
+- **Permanent fix (advanced):** add the missing permission text to the app and re-sign it on your Mac. Quit Dev Manager, then paste these into Terminal:
+  ```
+  APP="/Applications/webOS Dev Manager.app"
+  /usr/libexec/PlistBuddy -c "Add :NSLocalNetworkUsageDescription string Connects to your TV." "$APP/Contents/Info.plist"
+  xattr -dr com.apple.quarantine "$APP"
+  codesign --force --deep --sign - "$APP"
+  ```
+  Open Dev Manager again. Your Mac will ask to allow it to find devices on your local network. Click **Allow**. This turns off Apple's download check for this one app, so only do it with Dev Manager downloaded from the official link. Reinstalling Dev Manager undoes it.
+- **Or skip Dev Manager:** [install with SSH](INSTALL.md#advanced-install-with-ssh-instead-of-dev-manager).
 
 ### Windows
 
@@ -69,6 +79,7 @@ Your Mac is blocking Dev Manager from your home network. Macs ask for permission
 |---|---|---|
 | **No route to host** | Your computer isn't allowed to reach the TV | Mac: [Local Network permission](#mac-no-route-to-host). Windows: [Private network / firewall](#windows) |
 | **Connection timed out** | The TV can't be found at that address | Check the TV is on and the IP address in the Developer Mode app hasn't changed |
+| **Failed to fetch private key** | Dev Manager reached the TV, but **Key Server** is off | In the Developer Mode app on the TV, turn **Key Server** ON, add the TV again, then turn Key Server off |
 | **Connection refused** | The TV is there, but Developer Mode isn't running | Open the Developer Mode app and check **Dev Mode Status** is ON. The timer may have run out |
 | **Authentication failed** / **Permission denied** | Wrong passphrase, or an old saved key | Turn **Key Server** ON, remove the TV from Dev Manager, add it again with the passphrase shown now |
 
@@ -128,5 +139,7 @@ ssh -i ~/.ssh/<name>_webos -p 9922 -o HostKeyAlgorithms=+ssh-rsa -o PubkeyAccept
 - `<TV-IP>` is the IP address shown in the Developer Mode app.
 - When asked for a passphrase, type the **Developer Mode passphrase**.
 - Without those two `-o` options you'll see errors like **"no matching host key type found"** or **"Permission denied (publickey)"**.
+- A warning about a **"post-quantum key exchange"** is normal with this TV. It's safe to ignore on your home network.
+- To install Unbadge this way, see [Install with SSH](INSTALL.md#advanced-install-with-ssh-instead-of-dev-manager).
 
 The shell you get is restricted by LG (a "jail"), so you can't change system files. That's expected.

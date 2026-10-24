@@ -94,6 +94,8 @@ Dev Manager is a free, open-source tool made by the webOS Homebrew community (no
 > 🔒 **Now turn Key Server off.** In the Developer Mode app on the TV, switch **Key Server** to **OFF**. Dev Manager has already saved what it needs. Leaving Key Server on lets other devices on your Wi-Fi request the TV's access key. If you ever need to reconnect Dev Manager, turn it on again briefly.
 
 > Can't connect? See [Dev Manager can't connect to my TV](TROUBLESHOOTING.md#dev-manager-cant-connect-to-my-tv). On a Mac, **"No route to host"** almost always means [Dev Manager needs Local Network permission](TROUBLESHOOTING.md#mac-no-route-to-host).
+>
+> Prefer the terminal, or Dev Manager won't work for you? [Install with SSH instead](#advanced-install-with-ssh-instead-of-dev-manager).
 
 ---
 
@@ -163,3 +165,74 @@ Any of these works:
 **Want to switch Developer Mode off completely?** Open the Developer Mode app and turn off **Dev Mode Status**. This also removes Unbadge.
 
 Your original JioHotstar app is never touched.
+
+---
+
+## Advanced: install with SSH instead of Dev Manager
+
+**Most people should use Dev Manager (Steps 3–6).** This is for people comfortable with a terminal, or if Dev Manager won't work on your computer. It works on **Mac, Linux and Windows 10/11**, which all have `ssh`, `scp` and `curl` built in.
+
+First do **Steps 1 and 2** (Developer Mode on, Key Server **ON**), and download [`unbadge.ipk`](../../../releases/latest/download/unbadge.ipk) (Step 5). Replace `<TV-IP>` below with the IP address shown in the Developer Mode app.
+
+**1. Download the TV's access key** (Key Server must be ON):
+
+- **Mac / Linux** (Terminal):
+  ```
+  mkdir -p ~/.ssh && curl -o ~/.ssh/lgtv_webos http://<TV-IP>:9991/webos_rsa && chmod 600 ~/.ssh/lgtv_webos
+  ```
+- **Windows** (PowerShell):
+  ```
+  mkdir -Force $HOME\.ssh; curl.exe -o $HOME\.ssh\lgtv_webos http://<TV-IP>:9991/webos_rsa
+  ```
+
+Now turn **Key Server OFF** on the TV. You won't need it again.
+
+**2. Save the TV's connection settings.** Add this to the file `~/.ssh/config` (on Windows: `C:\Users\<you>\.ssh\config`). Create it if it doesn't exist. The TV runs an older SSH server, which is why the two `ssh-rsa` lines are needed:
+
+```
+Host lgtv
+  HostName <TV-IP>
+  Port 9922
+  User prisoner
+  IdentityFile ~/.ssh/lgtv_webos
+  HostKeyAlgorithms +ssh-rsa
+  PubkeyAcceptedAlgorithms +ssh-rsa
+```
+
+**3. Send the app to the TV.** Run this from the folder where you saved `unbadge.ipk`. When asked for a passphrase, type the **Developer Mode passphrase**.
+
+> A warning about a **"post-quantum key exchange"** is normal. It appears because the TV's SSH server is old, and it's safe to ignore on your home network.
+
+
+```
+ssh lgtv mkdir -p /media/developer/temp
+scp unbadge.ipk lgtv:/media/developer/temp/unbadge.ipk
+```
+
+**4. Install it.** Open a session on the TV:
+
+```
+ssh lgtv
+```
+
+Then paste these lines **into the TV session**:
+
+```
+luna-send-pub -w 30000 -i luna://com.webos.appInstallService/dev/install '{"id":"io.github.pixelhush.unbadge","ipkUrl":"/media/developer/temp/unbadge.ipk","subscribe":true}' </dev/null | grep -o '"state":"[^"]*"' | uniq
+```
+
+You'll see a few steps scroll by, ending with `"state":"installed"`. It finishes by itself about 30 seconds later. Then finish with:
+
+```
+rm /media/developer/temp/unbadge.ipk
+luna-send-pub -n 1 luna://com.webos.applicationManager/launch '{"id":"io.github.pixelhush.unbadge"}'
+exit
+```
+
+Unbadge opens on the TV. Continue with [Step 7](#step-7-open-unbadge-and-sign-in).
+
+**To update later,** repeat steps 3 and 4 with the new `unbadge.ipk`. **To remove it,** run this in a TV session:
+
+```
+luna-send-pub -n 1 luna://com.webos.appInstallService/dev/remove '{"id":"io.github.pixelhush.unbadge","subscribe":true}'
+```
