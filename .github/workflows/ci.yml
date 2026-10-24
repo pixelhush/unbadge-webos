@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Check
+        run: node scripts/check.mjs
+
+      - name: Build
+        run: node scripts/build-ipk.mjs
+
+      - name: Build is reproducible
+        run: |
+          sha256sum dist/*.ipk > first.sha
+          rm -rf dist && node scripts/build-ipk.mjs
+          sha256sum -c first.sha

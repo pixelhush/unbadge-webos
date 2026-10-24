@@ -1,0 +1,18 @@
+{
+  "name": "unbadge-webos",
+  "private": true,
+  "description": "Unofficial community tool for LG webOS TVs that hides the Asli 4K badge in the JioHotstar TV app.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node scripts/build-ipk.mjs",
+    "check": "node scripts/check.mjs",
+    "icons": "python3 scripts/make-icons.py src",
+    "deploy": "node scripts/build-ipk.mjs && node tools/ares.mjs install",
+    "launch": "node tools/ares.mjs launch",
+    "inspect": "node tools/ares.mjs inspect"
+  }
+}

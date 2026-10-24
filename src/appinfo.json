@@ -1,0 +1,15 @@
+{
+  "id": "io.github.pixelhush.unbadge",
+  "version": "1.0.0",
+  "vendor": "Unbadge contributors",
+  "type": "web",
+  "main": "index.html",
+  "title": "Unbadge",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png",
+  "bgColor": "#0f1014",
+  "resolution": "1920x1080",
+  "disableBackHistoryAPI": true,
+  "handlesRelaunch": true,
+  "inspectable": false
+}
