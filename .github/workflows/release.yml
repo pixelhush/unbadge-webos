@@ -1,7 +1,9 @@
 name: Release
 
 # Push a tag like v1.0.1 (matching src/appinfo.json) to build the .ipk and
-# publish it as a GitHub Release with a SHA-256 checksum.
+# publish it as a GitHub Release with a SHA-256 checksum. Each release also
+# carries a copy named unbadge.ipk, so the README's download button can always
+# point at releases/latest/download/unbadge.ipk.
 on:
   push:
     tags: ['v*']
@@ -20,6 +22,9 @@ jobs:
 
       - name: Build
         run: node scripts/build-ipk.mjs
+
+      - name: Stable download name
+        run: cp dist/*_all.ipk dist/unbadge.ipk
 
       - name: Checksum
         run: cd dist && sha256sum *.ipk > SHA256SUMS.txt && cat SHA256SUMS.txt

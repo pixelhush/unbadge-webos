@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+- Every release now includes `unbadge.ipk`, so the README's Download button always gets the latest version.
+
 ## 1.0.0
 
 - First release.

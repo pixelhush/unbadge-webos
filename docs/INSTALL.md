@@ -90,11 +90,11 @@ Dev Manager is a free, open-source tool made by the webOS Homebrew community (no
 
 ## Step 5: Download Unbadge
 
-1. Go to the **[Unbadge Releases page](../../../releases/latest)**.
-2. Under **Assets**, download the file that ends in **`.ipk`**
-   (for example `io.github.pixelhush.unbadge_1.0.0_all.ipk`).
+👉 **[Download unbadge.ipk](../../../releases/latest/download/unbadge.ipk)**. This link always gets the latest version.
 
-That `.ipk` file is the app. Keep it somewhere easy to find, like your Desktop.
+That `unbadge.ipk` file is the app. Keep it somewhere easy to find, like your Desktop.
+
+<sub>The [Releases page](../../../releases/latest) has the same file, plus a version-numbered copy and a `SHA256SUMS.txt` checksum for anyone who wants to verify it.</sub>
 
 ---
 
@@ -137,7 +137,7 @@ LG's Developer Mode has a **timer**. When it runs out, the TV **removes** Unbadg
 
 When a new version comes out (check the [Releases page](../../../releases)):
 
-1. Download the new `.ipk` file.
+1. Download the latest [unbadge.ipk](../../../releases/latest/download/unbadge.ipk).
 2. Install it with Dev Manager, the same as [Step 6](#step-6-install-unbadge-on-your-tv).
 
 You **stay logged in**. No need to remove the old version first.

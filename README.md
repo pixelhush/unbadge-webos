@@ -21,6 +21,12 @@
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-lightgrey"></a>
 </p>
 
+<p align="center">
+  <a href="../../releases/latest/download/unbadge.ipk"><img alt="Download Unbadge" src="https://img.shields.io/badge/%E2%AC%87%20Download-unbadge.ipk-c9a24a?style=for-the-badge"></a>
+  &nbsp;
+  <a href="docs/INSTALL.md"><img alt="Install guide" src="https://img.shields.io/badge/%F0%9F%93%96%20Install-guide-1e293b?style=for-the-badge"></a>
+</p>
+
 ---
 
 > **Unbadge is not made by, affiliated with, or endorsed by JioStar, JioHotstar, Star India or LG.** It's a free, unofficial community project for personal use. You need your own JioHotstar subscription. By using it you accept the [disclaimer](LEGAL.md).
@@ -39,6 +45,16 @@ Unbadge is a separate app for your LG TV. It opens JioHotstar's own TV web app, 
 - ✅ JioHotstar's own logo stays as it is
 - ❌ No "Asli 4K" badge
 
+## Download
+
+<a href="../../releases/latest/download/unbadge.ipk"><img alt="Download Unbadge" src="https://img.shields.io/badge/%E2%AC%87%20Download-unbadge.ipk-c9a24a?style=for-the-badge"></a>
+
+This always downloads the **latest version**. The file is `unbadge.ipk`, the app you'll send to your TV.
+
+You can't install it by just copying it to the TV. Follow the **[install guide](docs/INSTALL.md)**, which takes about 20 minutes the first time.
+
+<sub>Older versions and checksums are on the [Releases page](../../releases).</sub>
+
 ## Will it work on my TV?
 
 | You need | Details |
@@ -56,7 +72,7 @@ Unbadge is a separate app for your LG TV. It opens JioHotstar's own TV web app, 
 1. **Make a free LG Developer account**
 2. **Turn on Developer Mode** on your TV
 3. **Install "webOS Dev Manager"** on your computer
-4. **Download Unbadge** from the [Releases page](../../releases/latest)
+4. **[Download Unbadge](../../releases/latest/download/unbadge.ipk)** (`unbadge.ipk`)
 5. **Send it to your TV** with Dev Manager, then open **Unbadge** on the TV
 
 👉 **[Step-by-step install guide (with every click explained)](docs/INSTALL.md)**
