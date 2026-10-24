@@ -56,16 +56,25 @@ Dev Manager is a free, open-source tool made by the webOS Homebrew community (no
 1. Go to the **[Dev Manager download page](https://github.com/webosbrew/dev-manager-desktop/releases/latest)**.
 2. Scroll down to **Assets** and download the file for your computer:
 
-| Your computer | Download the file ending in |
+| Your computer | Download the file |
 |---|---|
-| Windows | `.msi` or `.exe` |
-| Mac | `.dmg` |
-| Linux | `.AppImage` or `.deb` |
+| Windows | The `.msi` ending in **`x64_en-US.msi`** (right for almost every PC) |
+| Mac | The `.dmg` (works on all Macs) |
+| Linux | `.deb` for Ubuntu/Debian, `.rpm` for Fedora, or `.AppImage` for anything else. Pick **`amd64`/`x86_64`** for most PCs, or **`arm64`/`aarch64`** for ARM machines |
 
-3. Install it like any other program.
-   - Community apps like this often aren't signed by Apple or Microsoft, so your computer may warn you. If you downloaded it from the official link above:
-   - **On a Mac:** if it says the app "can't be opened", **right-click** the app → **Open** → **Open**.
-   - **On Windows:** if a blue "Windows protected your PC" box appears, click **More info** → **Run anyway**.
+3. Install it like any other program. Community apps like this often aren't signed by Apple or Microsoft, so your computer may warn you. If you downloaded it from the official link above:
+
+   **🍎 Mac**
+   - If it says the app "can't be opened", **right-click** the app → **Open** → **Open**.
+   - The first time it connects, your Mac may ask to let Dev Manager **find devices on your local network**. Click **Allow**. If you clicked "Don't Allow" by mistake, see [this fix](TROUBLESHOOTING.md#mac-no-route-to-host).
+
+   **🪟 Windows**
+   - If a blue "Windows protected your PC" box appears, click **More info** → **Run anyway**.
+   - If Windows Firewall or your antivirus asks about Dev Manager, click **Allow**.
+
+   **🐧 Linux**
+   - `.deb` / `.rpm`: open the file to install it with your software center.
+   - `.AppImage`: right-click it → **Properties** → turn on **Allow executing file as program**, then double-click it. If it still won't start, see [this fix](TROUBLESHOOTING.md#linux-the-appimage-wont-open).
 
 ---
 
@@ -84,7 +93,7 @@ Dev Manager is a free, open-source tool made by the webOS Homebrew community (no
 
 > 🔒 **Now turn Key Server off.** In the Developer Mode app on the TV, switch **Key Server** to **OFF**. Dev Manager has already saved what it needs. Leaving Key Server on lets other devices on your Wi-Fi request the TV's access key. If you ever need to reconnect Dev Manager, turn it on again briefly.
 
-> Can't connect? See [Dev Manager can't connect to my TV](TROUBLESHOOTING.md#dev-manager-cant-connect-to-my-tv).
+> Can't connect? See [Dev Manager can't connect to my TV](TROUBLESHOOTING.md#dev-manager-cant-connect-to-my-tv). On a Mac, **"No route to host"** almost always means [Dev Manager needs Local Network permission](TROUBLESHOOTING.md#mac-no-route-to-host).
 
 ---
 
