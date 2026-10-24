@@ -125,7 +125,7 @@ That `unbadge.ipk` file is the app. Keep it somewhere easy to find, like your De
 2. Find **Unbadge** (the black icon with a gold play button and gold corners) and open it.
 3. Sign in to JioHotstar the usual way, for example by scanning the code with your phone.
 
-🎉 **That's it!** Play something in 4K. The "Asli 4K" badge no longer appears.
+🎉 **That's it!** Play something in 4K. The "Asli 4K" badge and corner logo no longer appear.
 
 > 💡 **Tip:** Move Unbadge to the front of your home bar so you don't open the old app by mistake. On the home screen, use **Edit** on the app bar and drag Unbadge where you want it.
 

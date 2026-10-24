@@ -10,7 +10,7 @@ Find your problem below. Each answer starts with the most likely fix.
   - [What the error message means](#what-the-error-message-means)
 - [Unbadge disappeared from my TV](#unbadge-disappeared-from-my-tv)
 - [The icon is blank or looks wrong](#the-icon-is-blank-or-looks-wrong)
-- [The Asli 4K badge is back](#the-asli-4k-badge-is-back)
+- [The Asli 4K badge or logo is back](#the-asli-4k-badge-or-logo-is-back)
 - [Videos don't play or show an error](#videos-dont-play-or-show-an-error)
 - [It's asking me to log in again](#its-asking-me-to-log-in-again)
 - [I don't see 4K](#i-dont-see-4k)
@@ -99,7 +99,7 @@ The TV sometimes remembers old icons. **Fully restart the TV** (hold the power b
 
 Still wrong? On the home screen, use **Edit** on the app bar, remove Unbadge from the bar, then add it back from the Apps list.
 
-## The Asli 4K badge is back
+## The Asli 4K badge or logo is back
 
 JioHotstar probably **updated their app**, and Unbadge needs an update too.
 
@@ -123,7 +123,7 @@ That's normal after you **reinstall** Unbadge, or after the Developer Mode timer
 - During playback, open the **Quality** menu and choose **Asli 4K** or **Auto**.
 - 4K needs a fast connection (around 25 Mbps or more).
 
-Unbadge doesn't change the picture quality. It only hides the badge.
+Unbadge doesn't change the picture quality. It only hides the badge and corner logo.
 
 ## Advanced: connecting to the TV with SSH
 

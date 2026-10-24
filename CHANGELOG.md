@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.0
+
+- Also hides the corner logo shown with the Asli 4K badge during 4K playback. Set `HIDE_CORNER_LOGO` to `false` in the userscript to keep it.
+
 ## 1.0.1
 
 - Every release now includes `unbadge.ipk`, so the README's Download button always gets the latest version.

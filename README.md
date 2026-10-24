@@ -5,7 +5,7 @@
 <h1 align="center">Unbadge for LG TVs</h1>
 
 <p align="center">
-  An <b>unofficial, community-made</b> app for LG TVs that hides the promotional <b>"Asli 4K" badge</b> while you watch JioHotstar.
+  An <b>unofficial, community-made</b> app for LG TVs that hides the <b>"Asli 4K" badge and corner logo</b> while you watch JioHotstar in 4K.
 </p>
 
 <p align="center">
@@ -35,15 +35,17 @@
 
 ## What does it do?
 
-During 4K playback, JioHotstar shows a promotional **"Asli 4K" badge** on screen, and it stays there the whole time.
+During 4K playback, JioHotstar shows an **"Asli 4K" badge and its logo** in the corner of the screen, and they stay there the whole time.
 
-Unbadge is a separate app for your LG TV. It opens JioHotstar's own TV web app, the same one the official LG app uses, and **hides only that badge**.
+Unbadge is a separate app for your LG TV. It opens JioHotstar's own TV web app, the same one the official LG app uses, and **hides that corner overlay**. Nothing else changes.
 
 - ✅ Your own account and plan
 - ✅ 4K picture quality
 - ✅ Live matches, movies, shows, subtitles, languages
-- ✅ JioHotstar's own logo stays as it is
 - ❌ No "Asli 4K" badge
+- ❌ No corner logo during 4K playback
+
+<sub>Prefer to keep the logo? Set `HIDE_CORNER_LOGO` to `false` in `src/webOSUserScripts/userScript.js` and build it yourself.</sub>
 
 ## Download
 
@@ -92,7 +94,7 @@ Still stuck? [Open an issue](../../issues/new/choose) and tell us your TV model.
 
 ## Is it safe?
 
-- **No JioHotstar code is included or changed.** Unbadge only adds one style rule that hides the badge on your own screen.
+- **No JioHotstar code is included or changed.** Unbadge only adds one style rule that hides the corner overlay on your own screen. The video itself is never touched.
 - **No data collection.** No ads, no tracking, no servers. All the code is here for anyone to check.
 - **Nothing is unlocked.** It doesn't give you free content or get around subscriptions or DRM.
 - **Easy to remove.** Delete it like any other app.
@@ -110,7 +112,7 @@ Using unofficial apps may go against the streaming service's terms of use. Use i
 
 - Unbadge is **unofficial** and is **not made by, affiliated with or endorsed by** JioStar, JioHotstar, Star India, Disney or LG.
 - It's **free, for personal use only**. Don't sell it.
-- It **includes no JioHotstar code**, **doesn't bypass DRM or subscriptions**, and **doesn't download or share video**. It only hides a promotional badge on your own TV.
+- It **includes no JioHotstar code**, **doesn't bypass DRM or subscriptions**, and **doesn't download or share video**. It only hides an on-screen overlay on your own TV.
 - You **use it at your own risk** and are responsible for following the service's and LG's terms.
 - Product names are trademarks of their owners and are mentioned only to describe compatibility. No endorsement is implied.
 

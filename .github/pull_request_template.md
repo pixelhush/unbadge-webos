@@ -4,7 +4,7 @@
 
 ## Checklist
 
-- [ ] It only hides the promotional "Asli 4K" badge. No logos, watermarks or copyright/ownership notices are hidden.
+- [ ] It only affects the "Asli 4K" playback overlay (badge and corner logo). Nothing in the video, and no copyright/ownership notices, are touched.
 - [ ] No changes to playback, DRM, sign-in, ads or subscriptions.
 - [ ] No JioHotstar code, assets or quotes of their source code, and no screenshots of match/show/film footage.
 - [ ] Tested on a TV. Model and webOS version:
