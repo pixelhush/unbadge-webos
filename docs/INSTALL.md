@@ -1,6 +1,6 @@
 # Install guide
 
-This guide assumes you've never done anything like this before. Follow the steps in order. Each one is short.
+This guide shows you how to **sideload** Unbadge onto your LG TV, which means installing it from your computer instead of the LG app store. It assumes you've never done anything like this before. Follow the steps in order. Each one is short.
 
 **Time needed:** about 20 minutes, only once.
 
