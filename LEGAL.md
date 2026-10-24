@@ -46,7 +46,7 @@ Unbadge is provided **"as is", without warranty of any kind**, express or implie
 
 We respect the rights of content owners and want to resolve any concerns quickly and in good faith.
 
-If you represent JioStar, LG or another rights holder and have a concern about this project, please **contact the maintainer first** through the contact details on the [maintainer's GitHub profile](https://github.com/pixelhush), or by [opening an issue](../../issues/new) titled **"Rights holder request"** (no need to include confidential details there). We will respond promptly and, where appropriate, modify or remove the material in question.
+If you represent JioStar, LG or another rights holder and have a concern about this project, please **contact the maintainer first** by [opening an issue](../../issues/new) titled **"Rights holder request"**. A short description of the concern is enough; there's no need to include confidential details. The maintainer is notified right away, will respond promptly, and where appropriate will modify or remove the material in question.
 
 You may also use [GitHub's official takedown process](https://docs.github.com/en/site-policy/content-removal-policies/dmca-takedown-policy).
 
