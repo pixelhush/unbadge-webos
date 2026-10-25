@@ -82,9 +82,9 @@ You can't install it by just copying it to the TV. Follow the **[install guide](
 ## Good to know
 
 - **Keep Developer Mode active.** LG's Developer Mode has a timer. If it runs out, the TV removes Unbadge. Open the **Developer Mode** app on your TV every few weeks and press **Extend**. [More info](docs/INSTALL.md#keep-it-working)
-- **You'll sign in once.** Unbadge is a separate app, so sign in to your JioHotstar account in it the first time.
+- **Same sign-in as the official app.** Unbadge uses the JioHotstar sign-in already on your TV. If it asks, sign in once.
 - **The official JioHotstar app isn't touched.** Keep it installed as a backup.
-- **Updates are manual.** When there's a new version, download it and install it the same way. You stay signed in. [How to update](docs/INSTALL.md#updating)
+- **Updates are manual.** When there's a new version, download it and install it the same way. You may need to sign in again afterwards. [How to update](docs/INSTALL.md#updating)
 
 ## Something not working?
 
@@ -97,7 +97,7 @@ Still stuck? [Open an issue](../../issues/new/choose) and tell us your TV model.
 - **No JioHotstar code is included or changed.** Unbadge only adds one style rule that hides the corner overlay on your own screen. The video itself is never touched.
 - **No data collection.** No ads, no tracking, no servers. All the code is here for anyone to check.
 - **Nothing is unlocked.** It doesn't give you free content or get around subscriptions or DRM.
-- **Easy to remove.** Delete it like any other app.
+- **Easy to remove.** Delete it like any other app. This signs you out of JioHotstar on the TV, so sign in again in the official app.
 
 Using unofficial apps may go against the streaming service's terms of use. Use it at your own risk.
 

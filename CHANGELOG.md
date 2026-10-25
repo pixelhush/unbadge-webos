@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.2
+
+- Docs: updating, reinstalling or removing Unbadge can sign you out of JioHotstar on the TV, including the official app, since both share the same sign-in.
+
 ## 1.1.1
 
 - Fixes the app not coming back when you reopen it after going to the Home screen.

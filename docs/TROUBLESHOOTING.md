@@ -115,7 +115,7 @@ JioHotstar probably **updated their app**, and Unbadge needs an update too.
 
 ## It's asking me to log in again
 
-That's normal after you **reinstall** Unbadge, or after the Developer Mode timer ran out. Sign in once and it remembers you again.
+That's normal after you **update, reinstall or remove** Unbadge, or after the Developer Mode timer ran out. Unbadge and the official JioHotstar app share the same sign-in on the TV, so this can sign out **both**. Sign in once and it remembers you again.
 
 ## I don't see 4K
 

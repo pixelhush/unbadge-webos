@@ -151,7 +151,7 @@ When a new version comes out (check the [Releases page](../../../releases)):
 1. Download the latest [unbadge.ipk](../../../releases/latest/download/unbadge.ipk).
 2. Install it with Dev Manager, the same as [Step 6](#step-6-install-unbadge-on-your-tv).
 
-You **stay logged in**. No need to remove the old version first.
+No need to remove the old version first. You may need to **sign in to JioHotstar again** afterwards.
 
 ---
 
@@ -161,6 +161,8 @@ Any of these works:
 
 - **On the TV:** Home → Apps → highlight **Unbadge** → hold **OK** (or use **Edit**) → **Delete**.
 - **In Dev Manager:** Apps → Unbadge → **Remove**.
+
+Removing Unbadge **signs you out of JioHotstar** on the TV, including the official app, because both use the same sign-in. Just sign in again.
 
 **Want to switch Developer Mode off completely?** Open the Developer Mode app and turn off **Dev Mode Status**. This also removes Unbadge.
 
