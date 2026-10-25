@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1
+
+- Fixes the app not coming back when you reopen it after going to the Home screen.
+
 ## 1.1.0
 
 - Also hides the corner logo shown with the Asli 4K badge during 4K playback. Set `HIDE_CORNER_LOGO` to `false` in the userscript to keep it.
